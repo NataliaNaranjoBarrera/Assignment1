@@ -38,8 +38,8 @@
             </div>
             <div class="col-4">
 
-                    <h2>Spaces by groups</h2>
-                    <p>Comparison about the number of spaces distributed according with the age of the child</p>
+                <h2>Spaces by groups</h2>
+                <p>Comparison about the number of spaces distributed according with the age of the child</p>
                 <div>
                     <canvas id="myChart"></canvas>
                 </div>
@@ -74,8 +74,9 @@
 
             <div class="col-4">
 
-                <h2>First Generation</h2>
-                <p>Have your parents attended college before you?</p>
+                <h2>Operating Auspice</h2>
+                <p>The number of centers operated by a Commercial agency, a non profit organization or is a public
+                    agency</p>
                 <div>
                     <canvas id="myChart2"></canvas>
                 </div>
@@ -85,14 +86,20 @@
                     const ctx2 = document.getElementById('myChart2');
 
                     new Chart(ctx2, {
-                        type: 'pie',
+                        type: 'bar',
                         data: {
-                            labels: ['Yes', 'No', 'Do not Now', 'Prefer Not To Say'],
+                            labels: ['Commercial Agency', 'Non Profit Agency', 'Public (City Operated) Agency'],
+
                             datasets: [{
-                                label: '# of Responses',
-                                data: [65, 30, 2, 3],
+                                label: 'Accept subsidy',
+                                data: [74, 606, 39],
+                                borderWidth: 1
+                            }, {
+                                label: 'Do not accept subsidy',
+                                data: [253, 98, 0],
                                 borderWidth: 1
                             }]
+                        
                         },
                         options: {
                             scales: {
@@ -108,8 +115,8 @@
 
             <div class="col-12 mt-3">
 
-                <h1>Admission Comparison</h1>
-                <p>George Brown College Vs Sheridan</p>
+                <h1>Ward distribution</h1>
+                <p>How this centers are located based on the ward number of the city of Toronto</p>
                 <div>
                     <canvas id="myChart3"></canvas>
                 </div>
@@ -118,17 +125,18 @@
                     const ctx3 = document.getElementById('myChart3');
 
                     new Chart(ctx3, {
-                        type: 'line',
+                        type: 'bar',
                         data: {
-                            labels: ['2006', '2007', '2008', '2009', '2010'],
+                            labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15',
+                                '16', '17', '18', '19', '20', '21', '22', '23', '24', '25'
+
+                            ],
                             datasets: [{
-                                label: 'George Brown',
-                                data: [11102, 11855, 12748, 13866, 13914],
+                                label: '# of Spaces in total',
+                                data: [32, 47, 64, 58, 36, 42, 35, 49, 38, 44, 41, 47, 29, 59, 45, 46, 34, 60, 40,
+                                    37, 38, 31, 38, 31],
                                 borderWidth: 1
-                            }, {
-                                label: 'Sheridan',
-                                data: [11768, 11963, 12439, 13394, 14249],
-                                borderWidth: 1
+                            
                             }]
                         },
                         options: {
@@ -142,13 +150,6 @@
                 </script>
 
             </div>
-        </div>
-    </div>
-    <div class="col-12">
-        <h1>Licensed Child Care Centres</h1>
-        <p>In the city of Toronto, licensed child care centres provide spaces for children across various age groups. The availability of these spaces differs significantly by zone, reflecting both local demand and the capacity of centres in each area. Below is a breakdown of the main categories and how they are distributed across zones:</p>
-        <div>
-            <canvas id="myChart"></canvas>
         </div>
     </div>
 
